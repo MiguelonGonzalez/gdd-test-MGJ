@@ -31,7 +31,7 @@ We can run our database on Kubernetes using the [Cloud Native PG Operator](https
 
 Can you set up a compatible image and run it on a Kubernetes cluster? You can use [minikube](https://minikube.sigs.k8s.io/docs/start/) or the managed cluster of your choice (EKS, GKE, AKS, etc.)
 
-## Part 2. Building a suitability analysis tool (7 points) :earth_americas:
+## Part 2. Building a suitability analysis tool :earth_americas: (7 points) 
 
 One of the main type of projects we develop at Cambium are Afforestation, Reforestation, and Revegetation (ARR). To analyze the areas that can be of interest, we leverage different types of data including remote sensing information from different providers. 
 
