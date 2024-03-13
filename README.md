@@ -31,4 +31,4 @@ The files generated in this GIS analysis are within Layers folder, which could n
 
 The jupyter notebook that answer this question is 'Part2.2.ipynb'. The output map is kept within results/map folder, both the complete map and a small sample.
 
-Since at the beggining of this 
+Since at the beggining I tried this exercise using only Python, at 'Extra.ipynb' notebook you can find the initial approach to the GIS analysis using `rasterio` library. Then I changed to a GIS desktop program to save time.
