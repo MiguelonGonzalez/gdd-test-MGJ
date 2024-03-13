@@ -4,6 +4,8 @@ Responses from Miguel González Jiménez
 
 All the responses, with their explanation and file indications are included in the Word Document called 'Answers', within results folder.
 
+The `yml` file allows to recrate exactly the same conda environment that I used to perform the exercices.
+
 ## Part 1. Setting up the infrastructure with Docker :whale: (3 points)
 
 The first part of the challenge is to set up a Docker image that fulfills the following requirements:
