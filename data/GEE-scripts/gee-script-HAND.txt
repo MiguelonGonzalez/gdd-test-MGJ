@@ -1,0 +1,13 @@
+
+var dw = ee.Image('users/gena/GlobalHAND/30m/hand-1000');
+var dw_band = dw.select('b1')
+var dw_clip = dw_band.clip(geometry)
+
+// Exporting to device
+Export.image.toDrive({
+  image: dw_clip,
+  description: "HAND",
+  scale:10,
+  region: geometry,
+  maxPixels: 1e13
+})

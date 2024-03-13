@@ -1,0 +1,27 @@
+var startDate = '2020-03-01';
+var endDate = '2020-03-30';
+var dw = ee.ImageCollection('GOOGLE/DYNAMICWORLD/V1')
+    .filterDate(startDate, endDate);
+    
+var dwImage = ee.Image(dw.mosaic()).clip(geometry2);
+print('DW ee.Image', dwImage);
+
+// Display de classified image using the label band
+var classification = dwImage.select('label');
+var dwVisParams = {
+  min: 0,
+  max: 8,
+  palette: ['#4795D6', '#E63E3E', '#E69B3E', '#7AF379', '#1A7266',
+  '#ED90EC', '#E6D954', '#54E6D3'] 
+};
+Map.addLayer(classification, dwVisParams, 'Classified Image');
+Map.centerObject(geometry2)
+
+// Exporting to device
+Export.image.toDrive({
+  image: classification,
+  description: "Dynamic_World_2020",
+  scale:10,
+  region: geometry2,
+  maxPixels: 1e13
+})

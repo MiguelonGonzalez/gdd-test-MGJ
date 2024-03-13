@@ -1,0 +1,15 @@
+
+var dw = ee.Image('JAXA/ALOS/AW3D30/V2_2');
+var dw_band = dw.select('AVE_DSM')
+var dw_clip = dw_band.clip(geometry)
+
+
+
+// Exporting to device
+Export.image.toDrive({
+  image: dw_clip,
+  description: "ALOS",
+  scale:10,
+  region: geometry,
+  maxPixels: 1e13
+})
